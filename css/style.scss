@@ -1,0 +1,245 @@
+$containerWidth: 1280px;
+
+$borderCol: 15px solid;
+$borderHr: 1px solid #000;
+
+$carousel: 5px;
+$carouselIndicatorsBottom: -45px;
+$carouselndicatorsBottomMedia: -36px;
+
+$marginTopLogo: 95px;
+$marginTop: 10px;
+$marginBottom: 10px;
+$marginRight: 10px;
+$marginBottomH5: 15px;
+$marginNavItem: 1px;
+
+$paddingTop: 15px;
+$paddingBottom: 15px;
+$paddingBottomLogo: 30px;
+$paddingRightLink: 10px;
+$paddingLeftCol6: 25px;
+$paddingNavItem: 5px 25px;
+$paddingDropdown: 0px 10px;
+$paddingCol4: 15px;
+$paddingH1: 20px 20px 0 20px;
+$paddingP: 20px;
+
+$white: #FFF;
+$grey: #999;
+$greenCol8Border: #056768;
+$greenCol8Content: #1D3A38;
+$greenCol4Border: #065252;
+$greenCol4Content: #03292A;
+$darkGreen: #012928;
+$lightGreen: #076766;
+
+$font: Verdana, Geneva, Tahoma, sans-serif;
+$fontSizeNav: 14px;
+$fontSizeDropdownAndP: 12px;
+$fontSizeH1: 48px;
+$fontSizeH5: 18px;
+$fontWeightNav: 600;
+
+$positionVerticalLogo: fixed;
+
+$textIndentP: 50px;
+$textTransformH5: uppercase;
+$textDecorationLink: underline;
+
+@mixin lightGreen {
+	background-color: $lightGreen;
+}
+
+.container {
+	max: {
+		width: $containerWidth;
+	}
+    margin: {
+		top: $marginTop;
+	}
+    font: {
+		family: $font;
+	}
+	color: $white;
+}
+
+.row {
+    margin: {
+		top: $marginTop;
+		bottom: $marginBottom;
+	}
+	background: {
+		color: $darkGreen;
+	}
+}
+
+.vertical_logo {
+	position: $positionVerticalLogo;
+	top: 0;
+	left: 0;
+	margin: {
+		top: $marginTopLogo;
+	}
+}
+
+.horizontal_logo {
+	padding: {
+		top: $paddingTop;
+		bottom: $paddingBottomLogo;
+	}
+}
+
+.navbar-expand-md {
+	background: {
+		color: $darkGreen!important;
+	}
+	padding: {
+		bottom: 0;
+		left: 0;
+	}
+}
+
+.navbar-toggler {
+	@include lightGreen;
+}
+
+.nav-item {
+	@include lightGreen;
+	margin: $marginNavItem;
+	padding: $paddingNavItem;
+}
+
+.nav-link {
+	font: {
+		weight: $fontWeightNav;
+		size: $fontSizeNav;
+	}
+	color: $white!important;
+	padding: 0;
+}
+
+.dropdown-menu {
+	@include lightGreen;
+	font: {
+		size: $fontSizeDropdownAndP;
+	}
+	color: $white!important;
+}
+
+.dropdown-item {
+	color: $white;
+	padding: $paddingDropdown;
+}
+
+.col-sm-8 {
+	border: $borderCol $greenCol8Border;
+	background: {
+		color: $greenCol8Content;
+	}
+}
+
+.col-sm-4 {
+	border: $borderCol $greenCol4Border;
+	background: {
+		color: $greenCol4Content;
+	}
+	padding: $paddingCol4;
+}
+
+h1 {
+	font: {
+		size: $fontSizeH1;
+	}
+	padding: $paddingH1;
+}
+
+hr {
+	border: {
+		top: $borderHr;
+	}
+}
+
+p {
+	text: {
+		indent: $textIndentP;
+	}
+	font: {
+		size: $fontSizeDropdownAndP;
+	}
+	padding: {
+		left: $paddingP;
+		right: $paddingP;
+	}
+}
+
+h5 {
+	text: {
+		transform: $textTransformH5;
+	}
+	font: {
+		size: $fontSizeH5;
+	}
+	margin: {
+		top: $marginTop;
+		bottom: $marginBottomH5;
+	}
+}
+
+.share {
+	margin: {
+		right: $marginRight;
+	}
+}
+
+.link {
+	text: {
+		decoration: $textDecorationLink;
+	}
+	color: $white;
+	padding: {
+		right: $paddingRightLink;
+	}
+}
+
+.link:hover {
+	color: $grey;
+}
+
+.carousel-indicators {
+	bottom: $carouselIndicatorsBottom;
+}
+
+.carousel-indicators {
+	li {
+		width: $carousel;
+		height: $carousel;
+		border-radius: 5px/5px;
+	}
+}
+
+.col-sm-6 {
+	@include lightGreen;
+	padding: {
+		top: $paddingTop;
+		bottom: $paddingBottom;
+		left: $paddingLeftCol6;
+	}
+	font: {
+		size: $fontSizeNav;
+	}
+}
+
+.topnav-right {
+	float: right;
+}
+
+@media only screen and (max-width: 768px) {
+    .vertical_logo {
+		display: none;
+    }
+	
+	.carousel-indicators {
+		bottom: $carouselndicatorsBottomMedia;
+	}
+}

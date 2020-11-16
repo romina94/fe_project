@@ -1,0 +1,1 @@
+function showMenu(){document.getElementsByClassName("dropdown-menu")[0].style.display="block"}function hideMenu(){document.getElementsByClassName("dropdown-menu")[0].style.display="none"}
